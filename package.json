@@ -1,0 +1,17 @@
+{
+  "name": "monorepo-demo",
+  "version": "1.0.0",
+  "repository": "git@github.com:rbaxter08/monorepo-demo.git",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "test": "yarn workspaces foreach -p run test"
+  },
+  "dependencies": {
+    "typescript": "^4.6.4"
+  },
+  "packageManager": "yarn@3.2.0",
+  "workspaces": [
+    "packages/*"
+  ]
+}
