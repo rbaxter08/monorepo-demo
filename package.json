@@ -5,7 +5,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "turbo": "pnpm turbo run build"
+    "ci": "pnpm turbo run build"
   },
   "dependencies": {
     "typescript": "^4.6.4"

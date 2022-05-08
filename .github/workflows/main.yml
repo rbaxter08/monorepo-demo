@@ -44,7 +44,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Run Turbo
-        run: pnpm run turbo
+        run: pnpm run ci
       - name: Deploy Next 🚀
         uses: JamesIves/github-pages-deploy-action@3.6.2
         with:
