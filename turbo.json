@@ -7,7 +7,7 @@
       "outputs": []
     },
     "build": {
-      "dependsOn": ["test", "^build"],
+      "dependsOn": ["test"],
       "outputs": ["out/**", "dist/**"]
     },
     "frontend-app#build": {
