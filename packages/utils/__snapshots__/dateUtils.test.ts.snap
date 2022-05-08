@@ -1,3 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`dateUtils addDays() should add days 1`] = `1991-05-11T00:00:00.000Z`;
