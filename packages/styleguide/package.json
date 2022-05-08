@@ -1,19 +1,28 @@
 {
   "name": "styleguide",
   "version": "1.0.0",
-  "main": "index.ts",
+  "source": "src/index.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
   "license": "MIT",
   "peerDependencies": {
     "react": "^18.1.0",
     "utils": "1.0.0"
   },
   "scripts": {
-    "build": "tsc --project tsconfig.production.json",
+    "build": "rollup -c",
     "test": "jest"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^22.0.0",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-typescript": "^8.3.2",
     "react": "^18.1.0",
     "react-dom": "18.1.0",
+    "rollup": "^2.72.1",
+    "rollup-plugin-dts": "^4.2.1",
+    "tslib": "^2.4.0",
     "utils": "1.0.0"
   },
   "dependencies": {
