@@ -5,6 +5,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
+    "build": "pnpm run --if-present --parallel build",
     "test": "pnpm run --if-present --parallel test"
   },
   "dependencies": {

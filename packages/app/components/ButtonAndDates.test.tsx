@@ -1,11 +1,11 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 
-import { Home } from "./";
+import { ButtonAndDates } from "./ButtonAndDates";
 
 describe("index", () => {
   it("Should render styleguide button", () => {
-    render(<Home />);
+    render(<ButtonAndDates />);
     expect(screen.getByRole("button")).toBeDefined();
   });
 });

@@ -1,15 +1,11 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import { Button } from "styleguide";
-import { addDays } from "utils";
 
+import { ButtonAndDates } from "../components/ButtonAndDates";
 import styles from "../styles/Home.module.css";
 
-export const Home: NextPage = () => {
-  const date = new Date();
-  const threeDaysFromNow = addDays(date, 3);
-
+const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
@@ -19,10 +15,7 @@ export const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <Button />
-        {date.toDateString()}
-        <br />
-        {threeDaysFromNow.toDateString()}
+        <ButtonAndDates />
 
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
@@ -79,3 +72,5 @@ export const Home: NextPage = () => {
     </div>
   );
 };
+
+export default Home;
