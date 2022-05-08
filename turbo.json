@@ -2,13 +2,17 @@
   "$schema": "https://turborepo.org/schema.json",
   "baseBranch": "origin/master",
   "pipeline": {
+    "test": {
+      "dependsOn": ["^build"],
+      "outputs": []
+    },
     "build": {
-      "dependsOn": ["test", "^build"],
+      "dependsOn": ["test"],
       "outputs": ["out/**", "dist/**"]
     },
-    "test": {
-      "dependsOn": [],
-      "outputs": []
+    "frontend-app#build": {
+      "dependsOn": ["backend#build", "test"],
+      "outputs": ["out/**"]
     }
   }
 }
