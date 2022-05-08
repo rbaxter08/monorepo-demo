@@ -43,5 +43,11 @@ jobs:
             ${{ runner.os }}-pnpm-store-
       - name: Install dependencies
         run: pnpm install
-      - name: Run tests
+
+  test:
+    name: Run tests
+      needs: cache-and-install
+    runs-on: ubuntu-latest
+    steps:
+       - name: Run tests
         run: pnpm run test
