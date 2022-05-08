@@ -7,7 +7,7 @@
       "outputs": ["out/**", "dist/**"]
     },
     "test": {
-      "dependsOn": ["^build"],
+      "dependsOn": [],
       "outputs": []
     }
   }
