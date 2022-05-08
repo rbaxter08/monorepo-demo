@@ -15,7 +15,9 @@ on:
 
 jobs:
   cache-and-install:
+    name: Setup pnpm
     runs-on: ubuntu-latest
+
   steps:
     - name: Checkout
       uses: actions/checkout@v3
