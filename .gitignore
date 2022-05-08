@@ -4,3 +4,4 @@ tsconfig.tsbuildinfo
 dist/
 .pnpm-debug.log
 .rollup.cache
+.turbo

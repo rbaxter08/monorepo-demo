@@ -5,13 +5,15 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "pnpm run --if-present --parallel build",
-    "test": "pnpm run --if-present --parallel test"
+    "turbo": "pnpm turbo run build"
   },
   "dependencies": {
     "typescript": "^4.6.4"
   },
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "devDependencies": {
+    "turbo": "^1.2.8"
+  }
 }
