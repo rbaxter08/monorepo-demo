@@ -8,7 +8,22 @@ importers:
     dependencies:
       typescript: 4.6.4
 
-  packages/app:
+  packages/backend-service:
+    specifiers:
+      '@types/jest': ^27.5.0
+      jest: ^28.1.0
+      ts-jest: ^28.0.1
+      typescript: ^4.6.4
+      utils: workspace:1.0.0
+    dependencies:
+      utils: link:../js-utils
+    devDependencies:
+      '@types/jest': 27.5.0
+      jest: 28.1.0
+      ts-jest: 28.0.1_z3fx76c5ksuwr36so7o5uc2kcy
+      typescript: 4.6.4
+
+  packages/frontend-app:
     specifiers:
       '@testing-library/jest-dom': ^5.16.4
       '@testing-library/react': ^13.2.0
@@ -32,8 +47,8 @@ importers:
       next: 12.1.6_ef5jwxihqo6n7gxfmzogljlgcm
       react: 18.1.0
       react-dom: 18.1.0_react@18.1.0
-      styleguide: link:../styleguide
-      utils: link:../utils
+      styleguide: link:../frontend-component-lib
+      utils: link:../js-utils
     devDependencies:
       '@testing-library/jest-dom': 5.16.4
       '@testing-library/react': 13.2.0_ef5jwxihqo6n7gxfmzogljlgcm
@@ -49,22 +64,7 @@ importers:
       ts-jest: 28.0.1_z3fx76c5ksuwr36so7o5uc2kcy
       typescript: 4.6.4
 
-  packages/backend-service:
-    specifiers:
-      '@types/jest': ^27.5.0
-      jest: ^28.1.0
-      ts-jest: ^28.0.1
-      typescript: ^4.6.4
-      utils: workspace:1.0.0
-    dependencies:
-      utils: link:../js-utils
-    devDependencies:
-      '@types/jest': 27.5.0
-      jest: 28.1.0
-      ts-jest: 28.0.1_z3fx76c5ksuwr36so7o5uc2kcy
-      typescript: 4.6.4
-
-  packages/styleguide:
+  packages/frontend-component-lib:
     specifiers:
       '@rollup/plugin-commonjs': ^22.0.0
       '@rollup/plugin-node-resolve': ^13.3.0
@@ -99,9 +99,9 @@ importers:
       rollup: 2.72.1
       rollup-plugin-dts: 4.2.1_pz6niy2zrvqhgxfup3pdyir4yu
       tslib: 2.4.0
-      utils: link:../utils
+      utils: link:../js-utils
 
-  packages/utils:
+  packages/js-utils:
     specifiers:
       '@types/jest': ^27.5.0
       date-fns: ^2.28.0
