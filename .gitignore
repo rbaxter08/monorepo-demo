@@ -3,3 +3,4 @@ node_modules
 .yarn
 tsconfig.tsbuildinfo
 dist/
+.yarnrc.yml
