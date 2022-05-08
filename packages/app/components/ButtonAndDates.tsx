@@ -1,5 +1,5 @@
-import { Button } from "styleguide";
 import { addDays } from "utils";
+import { Button } from "styleguide";
 
 export function ButtonAndDates() {
   const date = new Date();

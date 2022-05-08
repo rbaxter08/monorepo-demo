@@ -1,7 +1,7 @@
 {
   "name": "styleguide",
   "version": "1.0.0",
-  "main": "src/index.js",
+  "main": "src/index.ts",
   "license": "MIT",
   "peerDependencies": {
     "react": "^18.1.0",
@@ -20,7 +20,7 @@
     "rollup": "^2.72.1",
     "rollup-plugin-dts": "^4.2.1",
     "tslib": "^2.4.0",
-    "utils": "1.0.0"
+    "utils": "workspace:1.0.0"
   },
   "dependencies": {
     "@testing-library/react": "^13.2.0",
