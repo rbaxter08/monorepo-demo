@@ -1,6 +1,4 @@
 node_modules
 .vscode
-.yarn
 tsconfig.tsbuildinfo
 dist/
-.yarnrc.yml

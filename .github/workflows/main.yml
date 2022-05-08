@@ -14,21 +14,47 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  prepareCI:
+    name: Prepare CI env
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [16.x]
-
     steps:
-      - uses: actions/checkout@v3
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+      - name: Checkout
+        uses: actions/checkout@master
+      - name: Setup Node.js
+        uses: actions/setup-node@v3.1.1
         with:
-          node-version: ${{ matrix.node-version }}
-      - run: npm install -g yarn
-      - run: yarn set version berry
-      - run: yarn plugin import workspace-tools
+          node-version: 16
+      - name: Set yarn version
+        - run: yarn set version berry
+        - run: yarn plugin import workspace-tools
+        shell: bash
+      - name: Cache ~/.cache
+        id: cache
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache
+          key: ${{ runner.os }}-cache-${{ hashFiles('./yarn.lock') }}
+      - name: Install
+        run: yarn install --frozen-lockfile
+        shell: bash
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    needs: prepareCI
+    steps:
+      - uses: DerYeger/yarn-setup-action@master
+        with:
+          node-version: 16
       - run: yarn install --frozen-lockfile
       - run: yarn test
+      - run: yarn lint
+      steps:
+        - uses: actions/checkout@v3
+        - name: Use Node.js ${{ matrix.node-version }}
+          uses: actions/setup-node@v3
+          with:
+            node-version: ${{ matrix.node-version }}
+        - run: npm install -g yarn
+
+
