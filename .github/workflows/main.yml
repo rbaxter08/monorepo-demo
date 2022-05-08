@@ -45,9 +45,9 @@ jobs:
         run: pnpm install
       - name: Run tests
         run: pnpm run test
-      - name: Build
+      - name: Build BE
         run: pnpm run build-be
-      - name: Build
+      - name: Build FE
         run: pnpm run build-fe
       - name: Deploy Next 🚀
         uses: JamesIves/github-pages-deploy-action@3.6.2
