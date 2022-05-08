@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`dateFormatService dateFormatService() should print the correct date 1`] = `"Tue May 07 1991"`;
