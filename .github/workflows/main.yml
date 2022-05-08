@@ -19,6 +19,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: init env
-        uses: ./.github/workflows/my-action
+        uses: ./.github/workflows/pnpm-setup.yml
       - name: Run tests
         run: pnpm run test
