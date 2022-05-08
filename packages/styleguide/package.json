@@ -8,6 +8,7 @@
     "utils": "1.0.0"
   },
   "scripts": {
+    "build": "tsc --project tsconfig.production.json",
     "test": "jest"
   },
   "devDependencies": {
