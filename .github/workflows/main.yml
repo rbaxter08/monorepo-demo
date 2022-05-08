@@ -14,7 +14,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  cache-and-install:
+  cache:
     runs-on: ubuntu-latest
 
     steps:
